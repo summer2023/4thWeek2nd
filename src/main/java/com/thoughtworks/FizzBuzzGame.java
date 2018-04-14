@@ -14,6 +14,16 @@ public class FizzBuzzGame {
     public List<String> getResults() {
         return results;
     }
+
+    public static String judge1stSpecial(int n1,int num) {
+        String result = null;
+        if (String.valueOf(num).contains(String.valueOf(n1))||num%n1==0) {
+            result = "Fizz";
+        }else{
+            result = String.valueOf(num);
+        }
+        return result;
+    }
 }
 
 
