@@ -34,6 +34,17 @@ public class FizzBuzzGame {
         }
         return result;
     }
+
+    public static String judge3rdSpecial(int n3, int num) {
+        String result=null;
+        if (num % n3 == 0) {
+            result = "Whizz";
+        } else {
+            result = String.valueOf(num);
+        }
+        return result;
+
+    }
 }
 
 

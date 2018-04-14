@@ -25,4 +25,13 @@ public class FizzBuzzGameTest {
         Assert.assertEquals("Buzz",FizzBuzzGame.judge2ndSpecial(5,n1));
         Assert.assertEquals("Buzz",FizzBuzzGame.judge2ndSpecial(5,n2));
     }
+
+    @Test
+    public void should_return_Whizz_when_have_7() {
+        int n1=7;
+        int n2=14;
+
+        Assert.assertEquals("Whizz",FizzBuzzGame.judge3rdSpecial(7,n1));
+        Assert.assertEquals("Whizz",FizzBuzzGame.judge3rdSpecial(7,n2));
+    }
 }
