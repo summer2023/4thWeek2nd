@@ -24,6 +24,16 @@ public class FizzBuzzGame {
         }
         return result;
     }
+
+    public static String judge2ndSpecial(int n2,int num) {
+        String result=null;
+        if (num % n2 == 0) {
+            result = "Buzz";
+        } else {
+            result = String.valueOf(num);
+        }
+        return result;
+    }
 }
 
 
