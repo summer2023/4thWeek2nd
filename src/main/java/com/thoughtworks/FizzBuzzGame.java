@@ -8,32 +8,25 @@ public class FizzBuzzGame {
     private List<String> results = new ArrayList<>();
 
     public void start(int count) {
-        for (int i = 1; i <= count; i++) {
-            if (judge1stSpecialest(3, i)) {
-                results.add("Fizz");
-            }else if(judge1stSpecial(3,i)){
-                if (judge2ndSpecial(5, i)) {
-                    if (judge3rdSpecial(7, i)) {
-                        results.add("FizzBuzzWhizz");
-                    }else{
-                        results.add("FizzBuzz");
-                    }
-                } else if (judge3rdSpecial(7, i)) {
-                    results.add("FizzWhizz");
-                }else{
+        for (int i = 1; i <=count; i++) {
+            int flag=0;
+            if (judge1stSpecialest(3, i)) { results.add("Fizz"); }
+            else if(judge1stSpecial(3,i) && judge2ndSpecial(5, i) &&judge3rdSpecial(7, i)){results.add("FizzBuzzWhizz"); }
+            else if(judge1stSpecial(3,i) && judge2ndSpecial(5, i) ){results.add("FizzBuzz");}
+            else if(judge1stSpecial(3,i) && judge3rdSpecial(7, i)) { results.add("FizzWhizz"); }
+            else if(judge2ndSpecial(5, i) && judge3rdSpecial(7, i)){ results.add("BuzzWhizz");}
+            else{
+                if (judge1stSpecial(3, i)) {
                     results.add("Fizz");
-                }
-            } else if (judge2ndSpecial(5, i)) {
-                if (judge3rdSpecial(7, i)) {
-                    results.add("BuzzWhizz");
-                }else {
+                } else if (judge2ndSpecial(5, i)) {
                     results.add("Buzz");
+                } else if (judge3rdSpecial(7, i)) {
+                    results.add("Whizz");
+                } else {
+                    results.add(String.valueOf(i));
                 }
-            } else if (judge3rdSpecial(7, i)) {
-                results.add("Whizz");
-            }else{
-                results.add(String.valueOf(i));
             }
+
 
         }
 
